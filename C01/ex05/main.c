@@ -1,13 +1,14 @@
-#include <stdio.h>
+#include	<stdio.h>
+#include	<unistd.h>
 
 void	ft_putstr(char *str);
 
 int	main(void)
 {
-	char str[] = "Hello 42!\n";
+	char str[] = "Hello 42!";
 
-	printf("Calling function with: %s", &str[0]);
-
-	printf("Result:\n");
-	ft_putstr(&str[0]);
+	write(1, "Calling with: Hello 42!\n",24);
+	write(1, "Result:\n",8);
+	ft_putstr(str);
+	write(1, "\n", 1);
 }
