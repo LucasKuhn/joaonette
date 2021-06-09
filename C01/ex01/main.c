@@ -25,8 +25,8 @@ int	main(void)
 	ptr7 = &ptr6;
 	ptr8 = &ptr7;
 	ptr9 = &ptr8;
-	printf("i value before: %d\n", *********ptr9);
+	printf("i value before: %d\n", i);
 	ft_ultimate_ft(ptr9);
-	printf("i value after:  %d\n", *********ptr9);
+	printf("i value after:  %d\n", i);
 	return (0);
 }
