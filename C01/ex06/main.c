@@ -4,9 +4,11 @@ int	ft_strlen(char *str);
 
 int	main(void)
 {
-	char str[] = "Hello 42!\n";
+	char str[] = "Bonjour, 42";
 
-	printf("Calling function with: %s", &str[0]);
+	printf("Calling function with: %s \n", str);
 
-	printf("Result:\n%d\n", ft_strlen(str));
+ 	int i = ft_strlen(str);
+
+	printf("Result: %d\n", i);
 }

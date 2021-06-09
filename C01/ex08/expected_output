@@ -1,0 +1,5 @@
+Array before:
+42 43 1 2 3 
+
+Array after:
+1 2 3 42 43 
