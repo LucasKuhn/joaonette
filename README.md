@@ -4,6 +4,7 @@ Test suite for evaluating your code (Or other people's code on evaluations)
 # Setup 
 1. Clone this repo ( I suggest cloning to the root and calling it tests )
 ```sh
+cd ~
 git clone https://github.com/LucasKuhn/basecamp-tests.git tests
 ```
 
@@ -32,4 +33,9 @@ gcc -Wall -Wextra -Werror ~/tests/$LIST/`basename $PWD`/*.c *.c
 # PPPN 
 # User outcome: 
 # PPPN
+```
+
+5. (optional) Check the diff of the user output with the expected output 
+```
+git diff ./a.out ~/tests/$LIST/`basename $PWD`/expected_output
 ```
