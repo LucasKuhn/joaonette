@@ -36,6 +36,6 @@ gcc -Wall -Wextra -Werror ~/tests/$LIST/`basename $PWD`/*.c *.c
 ```
 
 5. (optional) Check the diff of the user output with the expected output 
-```
-git diff ./a.out ~/tests/$LIST/`basename $PWD`/expected_output
+```sh
+diff <(./a.out) ~/tests/$LIST/`basename $PWD`/expected_output
 ```
