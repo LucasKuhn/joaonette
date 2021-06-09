@@ -41,5 +41,5 @@ diff <(./a.out) ~/tests/$LIST/`basename $PWD`/expected_output
 ```
 
 # TODO
-- Add main and expected_output on C00/ex08
-- Add main and expected_output on C01/ex08
+- [ ] Add main and expected_output on C00/ex08
+- [ ] Add main and expected_output on C01/ex08
