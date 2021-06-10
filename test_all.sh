@@ -1,7 +1,4 @@
-if [ "$LIST" = "" ]; then
-   echo "LIST variable not set"
-   exit 1
-fi
+LIST="${LIST:-$(basename ${PWD})}"
 
 for d in */ ; do
     echo "===== $d ====="
