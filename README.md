@@ -43,7 +43,7 @@ diff <(./a.out) ~/tests/$LIST/`basename $PWD`/expected_output
 6. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
 You just need to enter the list directory, export the LIST variable, and call the scrip `bash ~/tests/test_all.sh` 
 
-<img src="https://cdn.discordapp.com/attachments/846394177369407569/852591855166029834/Kapture_2021-06-10_at_13.54.43.gif" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/26127185/121573685-e7ed6080-c9fb-11eb-9526-dd044caaed87.gif" width="600">
 
 7. (optional) Add aliases! 
 ```sh
