@@ -40,6 +40,16 @@ gcc -Wall -Wextra -Werror ~/tests/$LIST/`basename $PWD`/*.c *.c
 diff <(./a.out) ~/tests/$LIST/`basename $PWD`/expected_output
 ```
 
-# TODO
-- [ ] Add main and expected_output on C00/ex08
-- [ ] Add main and expected_output on C01/ex08
+6. (optional) There is also a `test_all` shell script that goes into all folders and tests the the outputs. 
+You just need to enter the directory, export the LIST variable, and call the scrip `bash ~/tests/test_all.sh` 
+
+![Test all gif](https://cdn.discordapp.com/attachments/846394177369407569/852591855166029834/Kapture_2021-06-10_at_13.54.43.gif)
+
+7. (optional) Add aliases! 
+```sh
+# .bashrc
+
+alias compile="cc -Wall -Wextra -Werror ~/tests/$LIST/${PWD##*/}/*.c *.c"
+alias compare="diff <(./a.out) ~/tests/$LIST/${PWD##*/}/expected_output"
+alias test_all="bash ~/tests/test_all.sh"
+```
