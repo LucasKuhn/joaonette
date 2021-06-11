@@ -1,5 +1,5 @@
-# Basecamp Tests
-Test suite for evaluating your code (Or other people's code on evaluations) 
+# Joãonette
+Test suite based on Moulinette, made by "Iniciativa João"
 
 # Setup 
 1. Clone this repo ( I suggest cloning to the root and calling it tests )
