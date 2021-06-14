@@ -1,7 +1,5 @@
-Should copy 5 bytes of str1 into str2
-Before:
-str1: Sweet home alabama
-str2: Where the skies are so blue
-After:
-str1: Sweet home alabama
-str2: Sweet the skies are so blue
+ft_strncpy - Copy N bytes of src into dest
+src: Sweet
+dest: Home alabama
+With N=5  : Sweetalabama
+With N=10 : Sweet

@@ -9,24 +9,10 @@ int	main(void)
 	char	str2[] = "000";
 	char	str3[] = "0 0";
 
-	printf("Will test the strings:\n");
+	printf("ft_str_is_numeric - Chech for numbers only strings\n");
 
-	printf("%s\n", empty);
-	printf("%s\n", str1);
-	printf("%s\n", str2);
-	printf("%s\n", str3);
-
-	printf("Expecting:\n");
-
-	printf("1\n");
-	printf("1\n");
-	printf("1\n");
-	printf("0\n");
-
-	printf("Result:\n");
-
-	printf("%d\n", ft_str_is_numeric(empty));
-	printf("%d\n", ft_str_is_numeric(str1));
-	printf("%d\n", ft_str_is_numeric(str2));
-	printf("%d\n", ft_str_is_numeric(str3));
+	printf("%s : %d\n", empty, ft_str_is_numeric(empty));
+	printf("%s : %d\n", str1, ft_str_is_numeric(str1));
+	printf("%s : %d\n", str2, ft_str_is_numeric(str2));
+	printf("%s : %d\n", str3, ft_str_is_numeric(str3));
 }

@@ -4,26 +4,12 @@ int ft_str_is_printable(char *str);
 int	main(void)
 {
 	char	empty[0];
-	// Printable 
-	char	str1[] = "Como se llama? (Si), bonita (si)";
-	char	str2[] = "!{|}~";
-	// Non-printable
-	char	str3[] = {1,2,3};
-	char	str4[] = "Shakira \n Shakira";
+	char	str1[] = "She makes a man wants to speak Spanish";
+	char	str2[] = "\n ¿Cómo se llama? (Sí), bonita (sí)";
 
-	printf("Expecting:\n");
-	printf("1");
-	printf("1");
-	printf("1");
-	printf("0");
-	printf("0");
-	printf("\n");
+	printf("ft_str_is_printable - Chech for printable only strings\n");
 
-	printf("Result:\n");
-	printf("%d", ft_str_is_printable(empty));
-	printf("%d", ft_str_is_printable(str1));
-	printf("%d", ft_str_is_printable(str2));
-	printf("%d", ft_str_is_printable(str3));
-	printf("%d", ft_str_is_printable(str4));
-	printf("\n");
+	printf("%s : %d\n", empty, ft_str_is_printable(empty));
+	printf("%s : %d\n", str1, ft_str_is_printable(str1));
+	printf("%s : %d\n", str2, ft_str_is_printable(str2));
 }

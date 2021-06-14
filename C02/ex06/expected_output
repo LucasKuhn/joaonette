@@ -1,4 +1,5 @@
-Expecting:
-11100
-Result:
-11100
+ft_str_is_printable - Chech for printable only strings
+ : 1
+She makes a man wants to speak Spanish : 1
+
+ ¿Cómo se llama? (Sí), bonita (sí) : 0

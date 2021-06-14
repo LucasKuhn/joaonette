@@ -1,15 +1,5 @@
-Will test the strings:
-
-123
-000
-0 0
-Expecting:
-1
-1
-1
-0
-Result:
-1
-1
-1
-0
+ft_str_is_numeric - Chech for numbers only strings
+ : 1
+123 : 1
+000 : 1
+0 0 : 0

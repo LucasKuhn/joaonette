@@ -1,9 +1,5 @@
-Will test the strings:
-
-abc
-abC
- ab
-Expecting:
-1100
-Result:
-1100
+ft_str_is_lowercase - Chech for lowercase only strings
+ : 1
+abc : 1
+abC : 0
+ ab : 0

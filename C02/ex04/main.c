@@ -8,26 +8,10 @@ int	main(void)
 	char	str2[] = "abC";
 	char	str3[] = " ab";
 
-	printf("Will test the strings:\n");
+	printf("ft_str_is_lowercase - Chech for lowercase only strings\n");
 
-	printf("%s\n", empty);
-	printf("%s\n", str1);
-	printf("%s\n", str2);
-	printf("%s\n", str3);
-
-	printf("Expecting:\n");
-
-	printf("1");
-	printf("1");
-	printf("0");
-	printf("0");
-	printf("\n");
-
-	printf("Result:\n");
-
-	printf("%d", ft_str_is_lowercase(empty));
-	printf("%d", ft_str_is_lowercase(str1));
-	printf("%d", ft_str_is_lowercase(str2));
-	printf("%d", ft_str_is_lowercase(str3));
-	printf("\n");
+	printf("%s : %d\n", empty, ft_str_is_lowercase(empty));
+	printf("%s : %d\n", str1, ft_str_is_lowercase(str1));
+	printf("%s : %d\n", str2, ft_str_is_lowercase(str2));
+	printf("%s : %d\n", str3, ft_str_is_lowercase(str3));
 }
