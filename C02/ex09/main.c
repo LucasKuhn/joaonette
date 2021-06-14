@@ -1,17 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
 
 char *ft_strcapitalize(char *str);
 
 int	main (void)
 {
-	char	teste1[] = "8eJ";
-	char	teste2[] = "teSTINGw31rDCh4rs!@#";
-	char	teste3[] = "))rEKT LOL";
+	char	str1[] = "UPPERCASE WORDS";
+	char	str2[] = "4lfa num3r1c w0rd5";
+	char	str3[] = "weird-spacing|between=words";
+	char	str4[] = "))even{{weirder}}spacing((";
 
-	printf("This is a test: %s\n", teste1);
-	printf("Is first letter capitalized? %s\n", (ft_strcapitalize(teste1)));
-	printf("Is first letter capitalized? %s\n", (ft_strcapitalize(teste2)));
-	printf("Is first letter capitalized? %s\n", (ft_strcapitalize(teste3)));
+	printf("Should capitalize: %s\n", (ft_strcapitalize(str1)));
+	printf("Should capitalize: %s\n", (ft_strcapitalize(str2)));
+	printf("Should capitalize: %s\n", (ft_strcapitalize(str3)));
+	printf("Should capitalize: %s\n", (ft_strcapitalize(str4)));
 }
-
-//-ReKt17+LOl MdR Mdr 4242l42

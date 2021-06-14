@@ -1,0 +1,8 @@
+Src  string : Sweet home alabama
+Dest string : Where the skies are so blue
+DEST RESULTS
+With size 0 : Where the skies are so blue
+With size 1 : 
+With size 6 : Sweet
+With size 99: Sweet home alabama
+Returned val: 18

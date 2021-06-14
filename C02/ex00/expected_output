@@ -1,0 +1,7 @@
+(Should copy str1 into str2)
+Before:
+Str1: A long time ago
+Str2: in a galaxy far, far away
+After:
+Str1: A long time ago
+Str2: A long time ago

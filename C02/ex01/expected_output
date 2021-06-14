@@ -1,0 +1,7 @@
+Should copy 5 bytes of str1 into str2
+Before:
+str1: Sweet home alabama
+str2: Where the skies are so blue
+After:
+str1: Sweet home alabama
+str2: Sweet the skies are so blue

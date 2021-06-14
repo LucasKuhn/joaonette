@@ -3,13 +3,27 @@ int ft_str_is_printable(char *str);
 
 int	main(void)
 {
-	char	teste1[] = "this is printable";
-	char	teste2[] = "this\0is\0not";
 	char	empty[0];
+	// Printable 
+	char	str1[] = "Como se llama? (Si), bonita (si)";
+	char	str2[] = "!{|}~";
+	// Non-printable
+	char	str3[] = {1,2,3};
+	char	str4[] = "Shakira \n Shakira";
 
-	printf("%s\n", teste1);
-	printf("%s\n", teste2);
-	printf("O retorno deve ser 0 e é: %d\n", ft_str_is_printable(teste1));
-	printf("O retorno deve ser 1 e é: %d\n", ft_str_is_printable(teste2));
-	printf("Retorno vazio deve ser 1 e é: %d\n", ft_str_is_printable(empty));
+	printf("Expecting:\n");
+	printf("1");
+	printf("1");
+	printf("1");
+	printf("0");
+	printf("0");
+	printf("\n");
+
+	printf("Result:\n");
+	printf("%d", ft_str_is_printable(empty));
+	printf("%d", ft_str_is_printable(str1));
+	printf("%d", ft_str_is_printable(str2));
+	printf("%d", ft_str_is_printable(str3));
+	printf("%d", ft_str_is_printable(str4));
+	printf("\n");
 }
