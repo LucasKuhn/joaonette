@@ -1,0 +1,4 @@
+src: 456
+dest: 123
+nb: 2
+strncat: 12345 | ft_strncat: 12345 

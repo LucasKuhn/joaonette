@@ -1,0 +1,3 @@
+dest: 123, src: 456789, size: 6
+og_strlcat return: 9 | dest: 12345 
+ft_strlcat return: 9 | dest: 12345 

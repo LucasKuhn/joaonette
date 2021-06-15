@@ -7,10 +7,16 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb);
 
 int	main(void)
 {
-
-	char dest[10] = "123";
-	char src[] = "456";
+	char dest[7] = "123";
+	char src[4] = "456";
 	int nb = 2;
-	printf("src: %s, dest: %s\n", src, dest);
-	printf("ft_strncat = %s, strncat = %s\n", ft_strncat(dest, src, nb), strncat(dest, src, nb));
+	
+	printf("src: %s\ndest: %s\nnb: %d\n", src, dest, nb);
+	printf("strncat: %s | ", strncat(dest, src, nb));
+
+	// Re-sets the strings
+	strcpy(dest, "123");
+	strcpy(src, "456");
+
+	printf("ft_strncat: %s \n", ft_strncat(dest, src, nb));
 }

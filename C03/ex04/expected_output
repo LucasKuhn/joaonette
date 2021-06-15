@@ -1,0 +1,2 @@
+str: 123456, to_find: 45
+ft_strstr = 456, strncat = 456
