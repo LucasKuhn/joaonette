@@ -11,3 +11,6 @@ for d in */ ; do
 		echo "OK"
 	fi
 done
+
+echo "===== NORMA ====="
+norminette -R CheckForbiddenSourceHeader
