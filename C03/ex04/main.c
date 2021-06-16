@@ -10,5 +10,5 @@ int	main(void)
 	char str[] = "123456";
 	char to_find[] = "45";
 	printf("str: %s, to_find: %s\n", str, to_find);
-	printf("ft_strstr = %s, strncat = %s\n", ft_strstr(str, to_find), strstr(str, to_find));
+	printf("ft_strstr = %s, strstr = %s\n", ft_strstr(str, to_find), strstr(str, to_find));
 }
