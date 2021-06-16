@@ -1,11 +1,11 @@
 # Joãonette
-Test suite based on Moulinette, made by "Iniciativa João"
+Test suite based on Moulinette, made by "Iniciativa João" ⛺️
 
 # Setup 
 1. Clone this repo ( I suggest cloning to the root and calling it tests )
 ```sh
 cd ~
-git clone https://github.com/LucasKuhn/basecamp-tests.git tests
+git https://github.com/LucasKuhn/joaonette.git
 ```
 
 # How I'm using it
@@ -14,15 +14,17 @@ git clone https://github.com/LucasKuhn/basecamp-tests.git tests
 ```sh
 export LIST=C00
 ```
+
 2. Move to the exercise folder. EX: To test ex04 from C00: 
 ```sh
 cd 42/C00/ex04
 ls
 # -> ft_is_negative.c
 ```
+
 3. Then, compile the user code with the main.c in the `tests` folder: 
 ```sh
-gcc -Wall -Wextra -Werror ~/tests/$LIST/`basename $PWD`/*.c *.c
+gcc -Wall -Wextra -Werror ~/joaonette/$LIST/`basename $PWD`/*.c *.c
 ```
 
 4. Call the output file
@@ -37,7 +39,7 @@ gcc -Wall -Wextra -Werror ~/tests/$LIST/`basename $PWD`/*.c *.c
 
 5. (optional) Check the diff of the user output with the expected output 
 ```sh
-diff <(./a.out) ~/tests/$LIST/`basename $PWD`/expected_output
+diff <(./a.out) ~/joaonette/$LIST/`basename $PWD`/expected_output
 ```
 
 6. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
@@ -49,8 +51,8 @@ You just need to enter the list directory, export the LIST variable, and call th
 ```sh
 # .bashrc
 
-alias compile='cc -Wall -Wextra -Werror -lbsd ~/tests/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c'
-alias compare='diff <(./a.out) ~/tests/$(basename $(dirname $PWD))/$(basename $PWD)/expected_output'
-alias test_all='bash ~/tests/test_all.sh'
-alias run_all='bash ~/tests/run_all.sh'
+alias compile='cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c'
+alias compare='diff <(./a.out) ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/expected_output'
+alias test_all='bash ~/joaonette/test_all.sh'
+alias run_all='bash ~/joaonette/run_all.sh'
 ```
