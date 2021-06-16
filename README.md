@@ -49,7 +49,8 @@ You just need to enter the list directory, export the LIST variable, and call th
 ```sh
 # .bashrc
 
-alias compile="cc -Wall -Wextra -Werror ~/tests/$LIST/${PWD##*/}/*.c *.c"
-alias compare="diff <(./a.out) ~/tests/$LIST/${PWD##*/}/expected_output"
-alias test_all="bash ~/tests/test_all.sh"
+alias compile='cc -Wall -Wextra -Werror -lbsd ~/tests/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c'
+alias compare='diff <(./a.out) ~/tests/$(basename $(dirname $PWD))/$(basename $PWD)/expected_output'
+alias test_all='bash ~/tests/test_all.sh'
+alias run_all='bash ~/tests/run_all.sh'
 ```
