@@ -1,5 +1,4 @@
 s1: 1234567, s2: 12345AAA
-cmp_n_0 = 0, og_cmp_n_0 = 0
-cmp_n_2 = 0, og_cmp_n_2 = 0
-cmp_n_6 = -11, og_cmp_n_6 = -11
-cmp_n_9 = -11, og_cmp_n_9 = -11
+N = 0          | N = 2          | N = 6            | N = 9
+og_strncmp = 0 | og_strncmp = 0 | og_strncmp = -11 | og_strncmp = -11
+ft_strncmp = 0 | ft_strncmp = 0 | ft_strncmp = -11 | ft_strncmp = -11
