@@ -10,14 +10,9 @@ git clone https://github.com/LucasKuhn/joaonette.git
 
 # How I'm using it
 
-1. Export a variable to define the list being corrected
+1. Move to the exercise folder. EX: To test ex04 from C00: 
 ```sh
-export LIST=C00
-```
-
-2. Move to the exercise folder. EX: To test ex04 from C00: 
-```sh
-cd 42/C00/ex04
+cd C00/ex04
 ls
 # -> ft_is_negative.c
 ```
@@ -37,7 +32,7 @@ gcc -Wall -Wextra -Werror ~/joaonette/$LIST/`basename $PWD`/*.c *.c
 # PPPN
 ```
 
-5. (optional) Check the diff of the user output with the expected output 
+5. (optional) Check the diff of the user output with the expected output, also present in joaonette
 ```sh
 diff <(./a.out) ~/joaonette/$LIST/`basename $PWD`/expected_output
 ```
