@@ -17,12 +17,12 @@ ls
 # -> ft_is_negative.c
 ```
 
-3. Then, compile the user code with the main.c in the `tests` folder: 
+2. Then, compile the user code with the main.c in the `tests` folder: 
 ```sh
 gcc -Wall -Wextra -Werror ~/joaonette/$LIST/`basename $PWD`/*.c *.c
 ```
 
-4. Call the output file
+3. Call the output file
 ```sh
 ./a.out 
 # Will check the numbers: 0 1 2 -1
@@ -32,17 +32,17 @@ gcc -Wall -Wextra -Werror ~/joaonette/$LIST/`basename $PWD`/*.c *.c
 # PPPN
 ```
 
-5. (optional) Check the diff of the user output with the expected output, also present in joaonette
+4. (optional) Check the diff of the user output with the expected output, also present in joaonette
 ```sh
 diff <(./a.out) ~/joaonette/$LIST/`basename $PWD`/expected_output
 ```
 
-6. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
+5. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
 You just need to enter the list directory, export the LIST variable, and call the scrip `bash ~/tests/test_all.sh` 
 
 <img src="https://user-images.githubusercontent.com/26127185/121573685-e7ed6080-c9fb-11eb-9526-dd044caaed87.gif" width="600">
 
-7. (optional) Add aliases! 
+6. (optional) Add aliases! 
 ```sh
 # .bashrc
 
