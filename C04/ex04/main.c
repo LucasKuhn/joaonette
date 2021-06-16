@@ -1,18 +1,20 @@
-
 #include <stdio.h>
 #include <unistd.h>
-#include <limits.h>
 
 void	ft_putnbr_base(int nb, char *base);
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int		main(void)
 {
 	ft_putnbr_base(11686193, "lumberjackon");
-	ft_putnbr_base(3387570376574, "lumberjackond sí");
-	ft_putnbr_base(614566743205, "lumberjack stondig");
+	write(1, "\n", 1);
+	ft_putnbr_base(6398, "elbaz");
+	write(1, "\n", 1);
+	ft_putnbr_base(3064304, "njetoa");
+	write(1, "\n", 1);
+
+	write(1, "Error testing - There should be nothing below:\n", 47);
+	ft_putnbr_base(3064304, "");
+	ft_putnbr_base(3064304, "1");
+	ft_putnbr_base(3064304, "njetoan");
+	ft_putnbr_base(3064304, "njeto-a");
 }
