@@ -38,7 +38,7 @@ diff <(./a.out) ~/joaonette/$LIST/`basename $PWD`/expected_output
 ```
 
 5. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
-You just need to enter the list directory, export the LIST variable, and call the scrip `bash ~/tests/test_all.sh` 
+You just need to enter the list directory `cd C01`, and call the scrip `bash ~/tests/test_all.sh` 
 
 <img src="https://user-images.githubusercontent.com/26127185/121573685-e7ed6080-c9fb-11eb-9526-dd044caaed87.gif" width="600">
 
@@ -51,3 +51,13 @@ alias compare='diff <(./a.out) ~/joaonette/$(basename $(dirname $PWD))/$(basenam
 alias test_all='bash ~/joaonette/test_all.sh'
 alias run_all='bash ~/joaonette/run_all.sh'
 ```
+
+## Troubleshooting 
+
+#### Folder with a different name than the list name
+
+If your folder don't have the same name as the list folder ( like `C01` ), you will need to export the LIST variable so joaonette can identify which list you are trying to test: 
+```sh
+export LIST=C01
+```
+This will happen often when correcting other people's code :) 
