@@ -17,9 +17,9 @@ ls
 # -> ft_is_negative.c
 ```
 
-2. Then, compile the user code with the main.c in the `tests` folder: 
+2. Then, compile the user code with the corresponding main.c in the `joaonette` folder: 
 ```sh
-gcc -Wall -Wextra -Werror ~/joaonette/$LIST/`basename $PWD`/*.c *.c
+cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c
 ```
 
 3. Call the output file
@@ -34,7 +34,7 @@ gcc -Wall -Wextra -Werror ~/joaonette/$LIST/`basename $PWD`/*.c *.c
 
 4. (optional) Check the diff of the user output with the expected output, also present in joaonette
 ```sh
-diff <(./a.out) ~/joaonette/$LIST/`basename $PWD`/expected_output
+diff <(./a.out) ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/expected_output
 ```
 
 5. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
