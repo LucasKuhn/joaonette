@@ -2,7 +2,7 @@
 Test suite based on Moulinette, made by "Iniciativa João" ⛺️
 
 # Setup 
-1. Clone this repo ( I suggest cloning to the root and calling it tests )
+1. Clone this repo ( I suggest cloning to the root and calling it joaonette )
 ```sh
 cd ~
 git https://github.com/LucasKuhn/joaonette.git
