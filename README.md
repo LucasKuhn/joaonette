@@ -38,7 +38,7 @@ diff <(./a.out) ~/joaonette/$LIST/`basename $PWD`/expected_output
 ```
 
 5. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
-You just need to enter the list directory `cd C01`, and call the scrip `bash ~/tests/test_all.sh` 
+You just need to enter the list directory `cd C01`, and call the scrip `bash ~/joaonette/test_all.sh` 
 
 <img src="https://user-images.githubusercontent.com/26127185/121573685-e7ed6080-c9fb-11eb-9526-dd044caaed87.gif" width="600">
 
