@@ -9,8 +9,8 @@ norminette -R CheckForbiddenSourceHeader
 
 for d in */ ; do
     echo "===== $d ====="
-	cc -Wall -Wextra -Werror -lbsd ~/tests/$LIST/$d/*.c $d/*.c -o $d/a.out || ERROR=true
-	DIFF=$(diff <($d/a.out) ~/tests/$LIST/$d/expected_output) || ERROR=true
+	cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$d/*.c $d/*.c -o $d/a.out || ERROR=true
+	DIFF=$(diff <($d/a.out) ~/joaonette/$LIST/$d/expected_output) || ERROR=true
 	if [[ "$DIFF" == "" && "$ERROR" == "" ]]; then
 		echo -e "OK ${GREEN}✓${NC}"
 	else
