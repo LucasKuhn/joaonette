@@ -1,0 +1,9 @@
+ft_fibonacci(-5)= -1
+ft_fibonacci( 0)= 0
+ft_fibonacci( 1)= 1
+ft_fibonacci( 2)= 1
+ft_fibonacci( 3)= 2
+ft_fibonacci( 4)= 3
+ft_fibonacci( 5)= 5
+ft_fibonacci( 6)= 8
+ft_fibonacci(10)= 55

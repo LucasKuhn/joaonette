@@ -1,0 +1,6 @@
+ft_find_next_prime(-1) =   2 | Expecting:   2
+ft_find_next_prime( 0) =   2 | Expecting:   2
+ft_find_next_prime( 3) =   3 | Expecting:   3
+ft_find_next_prime( 4) =   5 | Expecting:   5
+ft_find_next_prime(20) =  23 | Expecting:  23
+ft_find_next_prime(1000000000) = 1000000007 | Expecting: 1000000007

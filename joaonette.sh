@@ -12,19 +12,23 @@ check_exercise()
 		echo -e "KO ${RED}✖${NC}"
 	fi
 
-	if [ -n "$DIFF" ]; then
+	if [[ -n "$DIFF" && "$CHECKING_LIST" == "" ]]; then
 		echo -e "----- DIFF ----- ( < user | > expected )"
 		diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output
 	fi
 }
 
+# If you are inside an exercise folder
 if [[ $(basename $PWD) == ex* ]]; then
 	LIST=$(basename $(dirname $PWD))
 	DIR=$(basename $PWD)
-	LOCAL="$PWD"
+	LOCAL=$(echo $PWD)
 	check_exercise
+
+# If you are not in an exercise folder (presumably in a list folder)
 else
 	LIST=$(basename ${PWD})
+	CHECKING_LIST="true"
 	for DIR in */ ; do
 		LOCAL="${DIR::-1}"
 		echo "====== $DIR ======"
