@@ -4,3 +4,5 @@ str: 123hi5 | ft_atoi: 123
 str: ++++42 | ft_atoi: 42
 str: -++-42 | ft_atoi: 42
 str:  ---01 | ft_atoi: -1
+str: -  123 | ft_atoi: 0
+str:        | ft_atoi: 0
