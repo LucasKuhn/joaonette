@@ -8,7 +8,7 @@ cd ~
 git clone https://github.com/LucasKuhn/joaonette.git
 ```
 
-# How I'm using it
+# How to use it
 
 1. Move to the an exercise folder. EX: To test ex04 from C00: 
 ```sh
