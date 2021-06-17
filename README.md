@@ -10,7 +10,7 @@ git clone https://github.com/LucasKuhn/joaonette.git
 
 # How I'm using it
 
-1. Move to the exercise folder. EX: To test ex04 from C00: 
+1. Move to the an exercise folder. EX: To test ex04 from C00: 
 ```sh
 cd C00/ex04
 ls
@@ -20,9 +20,19 @@ ls
 2. Then, compile the user code with the corresponding main.c in the `joaonette` folder: 
 ```sh
 cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c
+# You can alias this command:
+alias compile='cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c'
 ```
 
-3. Call the output file
+3. (Optional) Add some aliases to your `.bashrc`!
+```sh
+# To compile with the main from joaonette
+alias compile='cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c'
+# To check if the output is correct
+alias joaonette='bash ~/joaonette/joaonette.sh'
+```
+
+4. Call the output file
 ```sh
 ./a.out 
 # Will check the numbers: 0 1 2 -1
@@ -32,32 +42,43 @@ cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basenam
 # PPPN
 ```
 
-4. (optional) Check the diff of the user output with the expected output, also present in joaonette
+5. If the output is not clear, check with joaonette 
 ```sh
+cd C00/ex04
+joaonette
+# OK ✓
+```
+
+6. (optional) You can also call `joanete` on a list to test the output of all exercises:
+
+```sh
+cd C00
+joaonette
+```
+![Kapture 2021-06-16 at 22 27 12](https://user-images.githubusercontent.com/26127185/122316379-2601ed00-cef2-11eb-8c43-ac5f4eef6fb9.gif)
+
+## CAVIATS - Your own code 
+
+1. You really should name the folder with the exact same name as the exercise, like `C01` :)
+
+## CAVIATS - Other people's code
+
+If your testing someone's code and it is in a weird folder, you can export the LIST variable and call the `test_all.sh` script: 
+```sh
+cd whatever
+LIST=C01 bash ~/joaonette/test_all.sh
+```
+
+You can also use the following commands to manually compile and compare a specific exercise: 
+```sh
+# compile 
+cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c
+# run it 
+./a.out
+# compare (returns nothing if it is OK)
 diff <(./a.out) ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/expected_output
 ```
 
-5. (optional) There is also a `test_all` shell script that goes into all folders and tests the diff of the outputs. 
-You just need to enter the list directory `cd C01`, and call the scrip `bash ~/joaonette/test_all.sh` 
+## Contributing 
 
-<img src="https://user-images.githubusercontent.com/26127185/121573685-e7ed6080-c9fb-11eb-9526-dd044caaed87.gif" width="600">
-
-6. (optional) Add aliases! 
-```sh
-# .bashrc
-
-alias compile='cc -Wall -Wextra -Werror -lbsd ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/*.c *.c'
-alias compare='diff <(./a.out) ~/joaonette/$(basename $(dirname $PWD))/$(basename $PWD)/expected_output'
-alias test_all='bash ~/joaonette/test_all.sh'
-alias run_all='bash ~/joaonette/run_all.sh'
-```
-
-## Troubleshooting 
-
-#### Folder with a different name than the list name
-
-If your folder don't have the same name as the list folder ( like `C01` ), you will need to export the LIST variable so joaonette can identify which list you are trying to test: 
-```sh
-export LIST=C01
-```
-This will happen often when correcting other people's code :) 
+Yes, please!!! Make a pull request and update whatever 
