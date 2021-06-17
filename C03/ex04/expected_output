@@ -1,2 +1,7 @@
-str: 123456, to_find: 45
-ft_strstr = 456, strstr = 456
+str: 123456
+to find: 45
+ft_strstr = 456 | strstr = 456
+to find: 
+ft_strstr = 123456 | strstr = 123456
+to find: ¯\_(ツ)_/¯
+ft_strstr = (null) | strstr = (null)

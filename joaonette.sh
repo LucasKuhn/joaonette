@@ -5,7 +5,7 @@ NC='\033[0m'
 check_exercise()
 {
 	cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/*.c $LOCAL/*.c -o $LOCAL/a.out  || ERROR=true
-	DIFF=$(diff <(./a.out) ~/joaonette/$LIST/$DIR/expected_output) || ERROR=true
+	DIFF=$(diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output) || ERROR=true
 	if [[ "$DIFF" == "" && "$ERROR" == "" ]]; then
 		echo -e "OK ${GREEN}✓${NC}"
 	else
@@ -13,8 +13,8 @@ check_exercise()
 	fi
 
 	if [ -n "$DIFF" ]; then
-		echo -e "----- DIFF -----"
-		diff <(./a.out) ~/joaonette/$LIST/$DIR/expected_output
+		echo -e "----- DIFF ----- ( < user | > expected )"
+		diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output
 	fi
 }
 
@@ -24,13 +24,10 @@ if [[ $(basename $PWD) == ex* ]]; then
 	LOCAL="$PWD"
 	check_exercise
 else
-	echo "hoi"
 	LIST=$(basename ${PWD})
 	for DIR in */ ; do
+		LOCAL="${DIR::-1}"
 		echo "====== $DIR ======"
-		LOCAL="$PWD/${DIR}"
-		echo "Local IS:"
-		echo $LOCAL
 		check_exercise
 	done
 fi 
