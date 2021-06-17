@@ -34,6 +34,7 @@ alias joaonette='bash ~/joaonette/joaonette.sh'
 
 4. Call the output file
 ```sh
+cd C00/ex04
 ./a.out 
 # Will check the numbers: 0 1 2 -1
 # Expected outcome: 
