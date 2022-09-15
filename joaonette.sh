@@ -4,8 +4,9 @@ NC='\033[0m'
 
 check_exercise()
 {
-	cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/*.c $LOCAL/*.c -o $LOCAL/a.out  || ERROR=true
+	cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/*.c $LOCAL/*.c -o $LOCAL/a.out || ERROR=true
 	DIFF=$(diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output) || ERROR=true
+	rm $LOCAL/a.out
 	if [[ "$DIFF" == "" && "$ERROR" == "" ]]; then
 		echo -e "OK ${GREEN}✓${NC}"
 	else
