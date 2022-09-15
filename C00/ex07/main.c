@@ -1,18 +1,15 @@
 #include <stdio.h>
+#include <unistd.h>
 
 void	ft_putnbr(int nb);
 
 int	main(void)
 {
-	printf("Printing 0: \n");
 	ft_putnbr(0);
-	printf("\n");
-
-	printf("Printing 2147483647: \n");
+	write(1,"\n",1);
 	ft_putnbr(2147483647);
-	printf("\n");
-
-	printf("Printing -2147483648: \n");
+	write(1,"\n",1);
 	ft_putnbr(-2147483648);
-	printf("\n");
+	write(1,"\n",1);
+	ft_putnbr(42);
 }
