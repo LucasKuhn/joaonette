@@ -24,8 +24,14 @@ check_exercise()
 	fi
 }
 
-BASEDIR=${BASEDIR:=$(dirname "$0")}
-echo "$BASEDIR"
+# Either set the basedir as the joaonette directory (if downloaded locally)
+# Or set it as the github raw url to run it remotely
+BASEDIR="$(dirname "$BASH_SOURCE")"
+echo this dir: $BASEDIR
+if [ "$BASEDIR" = "." ] ; then
+	BASEDIR="https://raw.githubusercontent.com/LucasKuhn/joaonette/main/joaonette.sh"
+fi
+echo basedir: $BASEDIR
 
 # If you are inside an exercise folder (starting with ex)
 # check the current exercise
@@ -43,7 +49,7 @@ else
 	echo -e "\n===== NORMINETTE ====="
 	norminette -R CheckForbiddenSourceHeader
 	for DIR in * ; do
-		LOCAL="${DIR::-1}"
+		LOCAL="./$DIR"
 		echo "====== $DIR ======"
 		check_exercise
 	done
