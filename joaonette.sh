@@ -29,7 +29,7 @@ check_exercise()
 BASEDIR="$(dirname "$BASH_SOURCE")"
 echo this dir: $BASEDIR
 if [ "$BASEDIR" = "." ] ; then
-	BASEDIR="https://raw.githubusercontent.com/LucasKuhn/joaonette/main/joaonette.sh"
+	BASEDIR="https://raw.githubusercontent.com/LucasKuhn/joaonette/main"
 fi
 echo basedir: $BASEDIR
 
