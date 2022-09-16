@@ -24,7 +24,7 @@ check_exercise()
 	fi
 }
 
-BASEDIR=${BASEDIR:=(dirname "$0")}
+BASEDIR=${BASEDIR:=$(dirname "$0")}
 echo "$BASEDIR"
 
 # If you are inside an exercise folder (starting with ex)
