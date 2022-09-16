@@ -4,7 +4,7 @@ NC='\033[0m'
 
 check_exercise()
 {
-	cc -Wall -Wextra -Werror -lbsd $BASEDIR/$LIST/$DIR/*.c $LOCAL/*.c -o $LOCAL/a.out || ERROR=true
+	cc -Wall -Wextra -Werror -lbsd $BASEDIR/$LIST/$DIR/main.c $LOCAL/*.c -o $LOCAL/a.out || ERROR=true
 	DIFF=$(diff <($LOCAL/a.out) $BASEDIR/$LIST/$DIR/expected_output) || ERROR=true
 	rm $LOCAL/a.out
 	if [[ "$DIFF" == "" && "$ERROR" == "" ]]; then
