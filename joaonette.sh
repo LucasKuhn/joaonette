@@ -42,7 +42,7 @@ else
 	LIST="${LIST:-$(basename ${PWD})}"
 	echo -e "\n===== NORMINETTE ====="
 	norminette -R CheckForbiddenSourceHeader
-	for DIR in */ ; do
+	for DIR in * ; do
 		LOCAL="${DIR::-1}"
 		echo "====== $DIR ======"
 		check_exercise
