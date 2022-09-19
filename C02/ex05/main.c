@@ -8,7 +8,7 @@ int	main(void)
 	char	str2[] = "SNEAKY SPACE";
 	char	str3[] = "(-.-)Zzz...";
 
-	printf("ft_str_is_uppercase - Chech for uppercase only strings\n");
+	printf("ft_str_is_uppercase - Check for uppercase only strings\n");
 
 	printf("%s: %d\n", empty, ft_str_is_uppercase(empty));
 	printf("%s: %d\n", str1, ft_str_is_uppercase(str1));

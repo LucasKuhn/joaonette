@@ -9,7 +9,7 @@ int	main(void)
 	char	lowercase[] = "xyz";
 	char	other[] = "Salut!";
 
-	printf("ft_str_is_alpha - Chech for alphabet only strings\n");
+	printf("ft_str_is_alpha - Check for alphabet only strings\n");
 
 	printf("%s : %d\n", empty, ft_str_is_alpha(empty));
 	printf("%s : %d\n", uppercase, ft_str_is_alpha(uppercase));

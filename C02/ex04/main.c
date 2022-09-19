@@ -8,7 +8,7 @@ int	main(void)
 	char	str2[] = "abC";
 	char	str3[] = " ab";
 
-	printf("ft_str_is_lowercase - Chech for lowercase only strings\n");
+	printf("ft_str_is_lowercase - Check for lowercase only strings\n");
 
 	printf("%s : %d\n", empty, ft_str_is_lowercase(empty));
 	printf("%s : %d\n", str1, ft_str_is_lowercase(str1));

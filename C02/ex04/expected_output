@@ -1,4 +1,4 @@
-ft_str_is_lowercase - Chech for lowercase only strings
+ft_str_is_lowercase - Check for lowercase only strings
  : 1
 abc : 1
 abC : 0

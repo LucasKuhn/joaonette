@@ -9,7 +9,7 @@ int	main(void)
 	char	str2[] = "000";
 	char	str3[] = "0 0";
 
-	printf("ft_str_is_numeric - Chech for numbers only strings\n");
+	printf("ft_str_is_numeric - Check for numbers only strings\n");
 
 	printf("%s : %d\n", empty, ft_str_is_numeric(empty));
 	printf("%s : %d\n", str1, ft_str_is_numeric(str1));
