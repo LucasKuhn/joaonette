@@ -5,10 +5,10 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 # Setup
-if [ -d "joaonette" ] ;then
-  echo "---"
-elif [[ $(find .. -type d -name 'joaonette') ]]; then
-	echo "---"
+if [ -d "joaonette" ]; then
+  echo "🤖"
+elif [[ $(find .. -maxdepth 1 -type d -name 'joaonette') ]]; then
+	echo "🤖"
 else
 	echo "What list do you want to correct?"
 	read LIST
@@ -33,6 +33,7 @@ if [[ $(basename $PWD) == ex* ]]; then
 	else
 		echo -e "OK ${GREEN}✓${NC}"
 	fi
+	rm ./a.out
 else
 # Check every exercise
 for DIR in ex* ; do
