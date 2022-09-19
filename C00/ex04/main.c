@@ -8,5 +8,5 @@ int	main(void)
 	ft_is_negative(1);
 	ft_is_negative(2);
 	ft_is_negative(-1);
-	printf("\n");
+	write(1,"\n",2);
 }

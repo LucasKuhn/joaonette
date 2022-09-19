@@ -38,10 +38,11 @@ else
 # Check every exercise
 for DIR in ex* ; do
 	echo "====== $DIR ======"
-	cc -Wall -Wextra -Werror -lbsd joaonette/C*/$DIR/main.c $DIR/*.c -o $DIR/a.out || ERROR=true
-	DIFF=$(diff <($DIR/a.out) joaonette/C*/$DIR/expected_output) || ERROR=true
+	ERROR=""
+	cc -Wall -Wextra -Werror -lbsd joaonette/C*/$DIR/main.c $DIR/*.c -o $DIR/a.out > /dev/null 2>&1
+	DIFF=$(diff <($DIR/a.out) joaonette/C*/$DIR/expected_output) > /dev/null 2>&1 || ERROR=true
 	rm $DIR/a.out
-	if [[ "$DIFF" == "" ]]; then
+	if [[ "$DIFF" == "" && "$ERROR" == "" ]]; then
 		echo -e "OK ${GREEN}✓${NC}"
 	else
 		echo -e "KO ${RED}✖${NC}"
