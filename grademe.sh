@@ -17,7 +17,7 @@ git clone https://github.com/LucasKuhn/joaonette.git
 # Check file names
 EX_COUNT=$(ls | wc -l)
 EX_NAMES=$(ls */*)
-EXPECTED_NAMES=$(cat ~/joaonette/$LIST/expected_files | head -n $EX_COUNT)
+EXPECTED_NAMES=$(cat joaonette/$LIST/expected_files | head -n $EX_COUNT)
 echo "====== filenames ======"
 if [[ $(diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)) ]]; then
 	echo -e "KO ${RED}✖${NC}"
