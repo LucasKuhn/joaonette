@@ -12,11 +12,10 @@ then
 	exit 1
 fi
 
-git clone https://github.com/LucasKuhn/joaonette.git
-
 # Check file names
 EX_COUNT=$(ls | wc -l)
 EX_NAMES=$(ls */*)
+git clone https://github.com/LucasKuhn/joaonette.git
 EXPECTED_NAMES=$(cat joaonette/$LIST/expected_files | head -n $EX_COUNT)
 echo "====== filenames ======"
 if [[ $(diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)) ]]; then
