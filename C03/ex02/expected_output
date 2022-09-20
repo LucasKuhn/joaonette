@@ -1,3 +1,2 @@
-src: 456
-dest: 123
-strcat: 123456 | ft_strcat: 123456 
+og_strcat: 123456 
+ft_strcat: 123456 

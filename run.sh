@@ -10,26 +10,45 @@ then
 	exit 1
 fi
 
+check_names()
+{
+	EX_COUNT=$(ls | wc -l)
+	EX_NAMES=$(ls */*)
+	EXPECTED_NAMES=$(cat ~/joaonette/$LIST/expected_files | head -n $EX_COUNT)
+	echo "====== filenames ======"
+	if [[ $(diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)) ]]; then
+		echo -e "KO ${RED}✖${NC}"
+	else
+		echo -e "OK ${GREEN}✓${NC}"
+	fi
+}
+
 check_exercise()
 {
+	ERROR=""
 	cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/main.c $LOCAL/*.c -o $LOCAL/a.out || ERROR=true
 	DIFF=$(diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output) || ERROR=true
-	rm $LOCAL/a.out
+
+	if [[ $(basename $PWD) == ex* ]]; then 
+		if [[ -n "$DIFF" ]]; then
+			echo -e "\n --- EXPECTED OUTPUT ---"
+			cat ~/joaonette/$LIST/$DIR/expected_output
+			echo -e "\n --- USER OUTPUT ---"
+			$LOCAL/a.out
+		fi
+	fi
+
 	if [[ "$DIFF" == "" && "$ERROR" == "" ]]; then
 		echo -e "OK ${GREEN}✓${NC}"
 	else
 		echo -e "KO ${RED}✖${NC}"
 	fi
 
-	if [[ -n "$DIFF" ]]; then
-		echo -e "----- DIFF ----- ( < user | > expected )"
-		diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output
-	fi
-
 	if [ "$UPDATE" = "true" ] ; then
 		echo -e "\nUpdating expected_output..."
 		$DIR/a.out > ~/joaonette/$LIST/$DIR/expected_output 
 	fi
+	rm $LOCAL/a.out
 }
 
 # If you are inside an exercise folder (starting with ex)
@@ -42,6 +61,7 @@ if [[ $(basename $PWD) == ex* ]]; then
 
 # If you are not in an exercise folder, correct the entire list
 else
+	check_names
 	for DIR in * ; do
 		echo "====== $LIST/$DIR ======"
 		LOCAL="$DIR"

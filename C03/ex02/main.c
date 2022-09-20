@@ -6,15 +6,13 @@ char	*ft_strcat(char *dest, char *src);
 
 int	main(void)
 {
-	char dest[7] = "123";
-	char src[4] = "456";
-	
-	printf("src: %s\ndest: %s\n", src, dest);
-	printf("strcat: %s | ", strcat(dest, src));
+	// original version
+	char og_dest[10] = "123";
+	char og_src[10]  = "456";
+	printf("og_strcat: %s \n", strcat(og_dest, og_src));
 
-	// Re-sets the strings
-	strcpy(dest, "123");
-	strcpy(src, "456");
-
-	printf("ft_strcat: %s \n", ft_strcat(dest, src));
+	// 42 version
+	char ft_dest[10] = "123";
+	char ft_src[10]  = "456";
+	printf("ft_strcat: %s \n", ft_strcat(ft_dest, ft_src));
 }

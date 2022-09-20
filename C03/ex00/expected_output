@@ -1,3 +1,6 @@
-s1: 111, s2: 111, s3: 112, s4: ABC
-og_strcmp_12 = 0 | og_strcmp_13 = -1 | og_strcmp_14 = -16
-ft_strcmp_12 = 0 | ft_strcmp_13 = -1 | ft_strcmp_14 = -16
+og_strcmp 111 111 = 0
+og_strcmp 111 112 = -1
+og_strcmp 111 ABC = -16
+ft_strcmp 111 111 = 0
+ft_strcmp 111 112 = -1
+ft_strcmp 111 ABC = -16

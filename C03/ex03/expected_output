@@ -1,4 +1,6 @@
-src: 456
-dest: 123
-nb: 2
-strncat: 12345 | ft_strncat: 12345 
+og_strncat: 123 
+og_strncat: 1234 
+og_strncat: 1234456 
+ft_strncat: 123 
+ft_strncat: 1234 
+ft_strncat: 1234456 

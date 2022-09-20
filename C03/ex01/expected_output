@@ -1,4 +1,11 @@
-s1: 1234567, s2: 12345AAA
-N = 0          | N = 2          | N = 6            | N = 9
-og_strncmp = 0 | og_strncmp = 0 | og_strncmp = -11 | og_strncmp = -11
-ft_strncmp = 0 | ft_strncmp = 0 | ft_strncmp = -11 | ft_strncmp = -11
+Comparing 123456 and 123ABC 
+
+og_strncmp(0) = 0
+og_strncmp(1) = 0
+og_strncmp(3) = 0
+og_strncmp(9) = -13
+
+ft_strncmp(0) = 0
+ft_strncmp(1) = 0
+ft_strncmp(3) = 0
+ft_strncmp(9) = -13
