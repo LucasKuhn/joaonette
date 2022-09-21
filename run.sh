@@ -1,4 +1,5 @@
 #!/bin/bash
+BASE_FOLDER="~/joaonette"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -31,10 +32,12 @@ check_exercise()
 
 	if [[ $(basename $PWD) == ex* ]]; then 
 		if [[ -n "$DIFF" ]]; then
-			echo -e "\n --- EXPECTED OUTPUT ---"
+			echo -e "\n--- EXPECTED OUTPUT ---"
 			cat ~/joaonette/$LIST/$DIR/expected_output
-			echo -e "\n --- USER OUTPUT ---"
+			echo -e "\n--- USER OUTPUT ---"
 			$LOCAL/a.out
+			echo -e "\n--- DIFF ---"
+			diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output
 		fi
 	fi
 
@@ -56,7 +59,7 @@ check_exercise()
 if [[ $(basename $PWD) == ex* ]]; then
 	DIR=$(basename $PWD)
 	echo "====== $LIST/$DIR ======"
-	LOCAL="./"
+	LOCAL=$PWD
 	check_exercise
 
 # If you are not in an exercise folder, correct the entire list
