@@ -2,6 +2,7 @@
 Test suite based on Moulinette
 
 # During an Eval
+**WARNING**: This will copy a bunch of files. Make sure you commited first!
 Simply enter the list main folder, and copy this command:
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/LucasKuhn/joaonette/main/grademe.sh)
