@@ -9,6 +9,11 @@ Simply enter the list folder, and copy this command:
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/LucasKuhn/joaonette/main/grademe.sh)
 ```
+To delete the files created automatically:
+```sh
+rm */*output
+rm */main.c
+```
 
 # To check your own work
 Clone the repo in your root:
