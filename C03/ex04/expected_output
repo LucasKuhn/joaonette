@@ -1,7 +1,9 @@
 str: 123456
-to find: 45
-ft_strstr = 456 | strstr = 456
-to find: 
-ft_strstr = 123456 | strstr = 123456
-to find: ¯\_(ツ)_/¯
-ft_strstr = (null) | strstr = (null)
+
+og_strstr("45") = 456
+og_strstr("") = 123456
+og_strstr("Hello") = (null)
+
+ft_strstr("45") = 456
+ft_strstr("") = 123456
+ft_strstr("Hello") = (null)
