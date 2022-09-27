@@ -13,6 +13,7 @@ then
 fi
 
 # Check file names
+
 EX_COUNT=$(ls | wc -l)
 EX_NAMES=$(ls */*)
 git clone https://github.com/LucasKuhn/joaonette.git

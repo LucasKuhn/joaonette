@@ -13,12 +13,14 @@ fi
 
 check_names()
 {
-	EX_COUNT=$(ls | wc -l)
+	EX_COUNT=$(ls */* | wc -l)
 	EX_NAMES=$(ls */*)
 	EXPECTED_NAMES=$(cat ~/joaonette/$LIST/expected_files | head -n $EX_COUNT)
 	echo "====== filenames ======"
 	if [[ $(diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)) ]]; then
 		echo -e "KO ${RED}✖${NC}"
+		echo -e "\n--- DIFF ---"
+		diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)
 	else
 		echo -e "OK ${GREEN}✓${NC}"
 	fi
@@ -49,8 +51,9 @@ check_exercise()
 
 	if [ "$UPDATE" = "true" ] ; then
 		echo -e "\nUpdating expected_output..."
-		$DIR/a.out > ~/joaonette/$LIST/$DIR/expected_output 
+		$LOCAL/a.out > ~/joaonette/$LIST/$DIR/expected_output
 	fi
+
 	rm $LOCAL/a.out
 }
 
