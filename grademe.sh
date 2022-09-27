@@ -14,13 +14,15 @@ fi
 
 # Check file names
 
-EX_COUNT=$(ls | wc -l)
+EX_COUNT=$(ls */* | wc -l)
 EX_NAMES=$(ls */*)
 git clone https://github.com/LucasKuhn/joaonette.git
 EXPECTED_NAMES=$(cat joaonette/$LIST/expected_files | head -n $EX_COUNT)
 echo "====== filenames ======"
 if [[ $(diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)) ]]; then
 	echo -e "KO ${RED}✖${NC}"
+	echo -e "\n--- DIFF ---"
+	diff <(echo $EX_NAMES) <(echo $EXPECTED_NAMES)
 else
 	echo -e "OK ${GREEN}✓${NC}"
 fi
