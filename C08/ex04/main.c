@@ -62,7 +62,7 @@ int	main(void)
 	ft_show_tab(tab);
 
 	// Segfault test (the following should print nothing)
-	tab = ft_strs_to_tab(9, strs);
+	tab = ft_strs_to_tab(10, strs);
 	ft_show_tab(tab);
 	tab = ft_strs_to_tab(-1, strs);
 	ft_show_tab(tab);
