@@ -57,22 +57,15 @@ int	main(void)
 {
 	t_stock_str	*tab;
 
-	char		*strs[] =  {"bonjour", "42", 0};
+	char		*strs[] =  {"Hey", "I", "Just", "Met", "You", "And", "This", "Is", "Crazy"};
+	tab = ft_strs_to_tab(9, strs);
+	ft_show_tab(tab);
 
-	// With AC equals to 2 (proper size):
-	write(1,"AC=2:\n", 7);
-	tab = ft_strs_to_tab(2, strs);
+	// Segfault test (the following should print nothing)
+	tab = ft_strs_to_tab(10, strs);
 	ft_show_tab(tab);
-	// With AC equals to 3":
-	write(1,"AC=3:\n", 6);
-	tab = ft_strs_to_tab(3, strs);
-	ft_show_tab(tab);
-	// With AC equals to 0":
-	write(1,"AC=0:\n", 6);
-	tab = ft_strs_to_tab(0, strs);
-	ft_show_tab(tab);
-	// With AC equals to -1":
-	write(1,"AC=-1:\n", 7);
 	tab = ft_strs_to_tab(-1, strs);
+	ft_show_tab(tab);
+	tab = ft_strs_to_tab(0, strs);
 	ft_show_tab(tab);
 }
