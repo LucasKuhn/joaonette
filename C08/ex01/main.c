@@ -16,9 +16,9 @@ t_bool	ft_is_even(int nbr)
 
 int	main()
 {
-	if (ft_is_even(3) == TRUE)
+	if (ft_is_even(2) == TRUE)
 		ft_putstr(EVEN_MSG);
-	if (ft_is_even(2) == FALSE)
+	if (ft_is_even(3) == FALSE)
 		ft_putstr(ODD_MSG);
 
 	return (SUCCESS);
