@@ -29,7 +29,8 @@ check_names()
 check_exercise()
 {
 	ERROR=""
-	cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/main.c $LOCAL/*.c -o $LOCAL/a.out || ERROR=true
+	echo "cc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/main.c $LOCAL/*.c -o $LOCAL/a.out"
+	gcc -Wall -Wextra -Werror -lbsd ~/joaonette/$LIST/$DIR/main.c $LOCAL/*.c -o $LOCAL/a.out || ERROR=true
 	DIFF=$(diff <($LOCAL/a.out) ~/joaonette/$LIST/$DIR/expected_output) || ERROR=true
 
 	if [[ $(basename $PWD) == ex* ]]; then 

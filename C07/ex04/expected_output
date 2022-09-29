@@ -1,4 +1,11 @@
-Hex to dec:
-2A -> 42
--2A -> -42
--80000000 -> -2147483648
+
+Invalid bases
+Invalid base_from: (null)
+Invalid base_to: (null)
+
+Hex to dec
+2A: 42
+-2A: -42
+-80000000: -2147483648
+0: 0
+Empty string: 0

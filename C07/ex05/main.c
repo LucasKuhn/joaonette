@@ -2,14 +2,15 @@
 
 char	**ft_split(char *str, char *charset);
 
-int	main(void)
+int main()
 {
-	char	**arr;
+	char str[] = "---This====is~~~not-=~a test!";
+	
+	char **arr = ft_split(str, "-=~");
 
-	arr = ft_split("~~~This###is***not~#*a test!", "~#*");
-	printf("%s\n", arr[0]);
-	printf("%s\n", arr[1]);
-	printf("%s\n", arr[2]);
-	printf("%s\n", arr[3]);
-	printf("%s\n", arr[4]);
+	while(*arr)
+	{
+		printf("%s\n", *arr);
+		arr++;
+	}
 }
