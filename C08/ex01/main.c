@@ -14,7 +14,7 @@ t_bool	ft_is_even(int nbr)
 		return (FALSE);
 }
 
-int	main(int argc, char **argv)
+int	main()
 {
 	if (ft_is_even(3) == TRUE)
 		ft_putstr(EVEN_MSG);
