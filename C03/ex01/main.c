@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int	ft_strncmp(char *s1, char *s2, unsigned int n);
 
 int	main(void)
 {
-	char s1[] = "123456";
-	char s2[] = "123ABC";
+	char s1[] = {42,42,-42};
+	char s2[] = {42,42,1};
 	printf("Comparing %s and %s \n\n", s1, s2);
 	
 	// Original version
